@@ -29,20 +29,14 @@ void quicksort(int number[], int first, int last) {
 }
 
 int binarySearch(int array[], int x, int low, int high) {
-    // Repeat until the pointers low and high meet each other
     while (low <= high) {
         int mid = low + (high - low) / 2;
 
-        // If the element is present at the middle
         if (array[mid] == x)
             return mid;
 
-        // If element is larger than mid, then
-        // it can only be present in right subarray
         if (array[mid] < x)
             low = mid + 1;
-        // Else the element can only be present
-        // in left subarray
         else
             high = mid - 1;
     }
@@ -61,8 +55,6 @@ int main() {
     printf("Order of Sorted elements:\n");
     for (i = 0; i < count; i++)
         printf(" %d", number[i]);
-    //int n = sizeof(number)/sizeof(int);
-    //printf("\nn: %d", n);
     int x;
     printf("\nwhat is the element you are searching for?\n");
     scanf("%d", &x);
