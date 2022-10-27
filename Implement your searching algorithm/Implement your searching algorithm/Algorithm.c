@@ -3,6 +3,8 @@
 
 #include<stdio.h>
 
+// Sorting function that takes an array and sorts it using quick sort method
+
 void quicksort(int number[], int first, int last) {
     int i, j, pivot, temp;
     if (first < last) {
@@ -28,6 +30,8 @@ void quicksort(int number[], int first, int last) {
     }
 }
 
+// Searching function that takes a sorted array and a key to search for in that array using binary search method
+
 int binarySearch(int array[], int x, int low, int high) {
     while (low <= high) {
         int mid = low + (high - low) / 2;
@@ -43,6 +47,8 @@ int binarySearch(int array[], int x, int low, int high) {
 
     return -1;
 }
+
+// Main function
 
 int main() {
     int i, count, number[25];
